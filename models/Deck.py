@@ -38,7 +38,8 @@ class Deck :
 
     # Metodo che pesca una carta dal deck
     def draw(self):
-        return self.mazzo.pop(len(self.mazzo)-1)
+        if self.len_deck() != 0:
+            return self.mazzo.pop(len(self.mazzo)-1)
 
     # Metodo che stampa la lista di carte del deck
     def string_deck(self):
